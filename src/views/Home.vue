@@ -19,7 +19,6 @@
   </ion-app>
 </template>
 <script>
-
 export default {
   name: "home",
   methods: {
@@ -27,10 +26,10 @@ export default {
       this.$router.push("about");
     },
     goToLineChart: function(type) {
-      this.$router.push("linechart/"+type);
+      this.$router.push("linechart/" + type);
     },
     goToTest: function(type) {
-      this.$router.push("test/"+type);
+      this.$router.push("test/" + type);
     }
   }
 };

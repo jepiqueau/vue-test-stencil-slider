@@ -216,35 +216,35 @@
 export default {
   name: "linechart",
   data() {
-      return {
-          type: this.$route.params.type
-      }
+    return {
+      type: this.$route.params.type
+    };
   },
   created() {
-        const root = document.documentElement;
-        switch(this.type) { 
-            case "basic": {
-                root.style.setProperty('--chart-axis-x-interval','1');
-                break;
-            }
-            case "markers": {
-                root.style.setProperty('--chart-axis-x-interval','20');
-                break;
-            }
-            case "multiplelines": { 
-                root.style.setProperty('--chart-axis-x-interval','2');
-                break;
-            }
-            case "multipleplots": { 
-                root.style.setProperty('--chart-axis-x-interval','1');
-                break;
-            }
-        }
+    const root = document.documentElement;
+    switch (this.type) {
+      case "basic": {
+        root.style.setProperty("--chart-axis-x-interval", "1");
+        break;
+      }
+      case "markers": {
+        root.style.setProperty("--chart-axis-x-interval", "20");
+        break;
+      }
+      case "multiplelines": {
+        root.style.setProperty("--chart-axis-x-interval", "2");
+        break;
+      }
+      case "multipleplots": {
+        root.style.setProperty("--chart-axis-x-interval", "1");
+        break;
+      }
+    }
   },
   methods: {
     goBackHome: function() {
       this.$router.push("/");
     }
-  }  
+  }
 };
 </script>
