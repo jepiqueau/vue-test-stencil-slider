@@ -1,20 +1,19 @@
 <template>
   <ion-app>
     <ion-header>
-      <ion-toolbar color="primary">
+      <ion-toolbar color="light">
         <ion-title>
-          Line Chart Example in Vue
+          Slider Example in Vue
         </ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content padding>
-      <p>Test Linechart Web component in Vue.js</p>
-      <ion-button @click="goToAbout" size="large">Go to About</ion-button>
-      <ion-button @click="goToLineChart('basic')" size="large">Basic LineChart</ion-button>
-      <ion-button @click="goToLineChart('markers')" size="large">Line with Markers</ion-button>
-      <ion-button @click="goToLineChart('multiplelines')" size="large">Multiple Lines</ion-button>
-      <ion-button @click="goToLineChart('multipleplots')" size="large">Multiple Plots</ion-button>
+      <p>Test Slider Web component in Vue.js</p>
+      <ion-button @click="goToAbout" size="small" expand="block">Go to About</ion-button>
+      <ion-button @click="goToSlider('basichorizontal')" size="small" expand="block">Basic Horizontal</ion-button>
+      <ion-button @click="goToSlider('basicvertical')" size="small" expand="block">Basic Vertical</ion-button>
+      <ion-button @click="goToSlider('paginationnavigationhorizontal')" size="small" expand="block">Pagination Navigation Horizontal</ion-button>
     </ion-content>
   </ion-app>
 </template>
@@ -25,8 +24,8 @@ export default {
     goToAbout: function() {
       this.$router.push("about");
     },
-    goToLineChart: function(type) {
-      this.$router.push("linechart/" + type);
+    goToSlider: function(type) {
+      this.$router.push("slider/" + type);
     },
     goToTest: function(type) {
       this.$router.push("test/" + type);

@@ -1,6 +1,6 @@
 {
-  "name": "vue-test-linechart",
-  "version": "0.1.6",
+  "name": "vue-test-slider",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -11,13 +11,13 @@
     "Vue",
     "stencil",
     "web component",
-    "chart",
-    "line chart"
+    "carousel",
+    "slider"
   ],
   "dependencies": {
-    "@ionic/core": "^4.0.0-rc.0",
+    "@ionic/core": "^4.0.2",
     "@ionic/vue": "0.0.1",
-    "stencil-linechart": "^0.1.9",
+    "stencil-jeep-slider": "^0.1.4",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

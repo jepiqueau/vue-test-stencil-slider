@@ -1,9 +1,9 @@
 <template>
   <ion-app>
     <ion-header>
-      <ion-toolbar color="primary">
+      <ion-toolbar color="light">
         <ion-title>
-          Line Chart Example in Vue | About
+          Slider Example in Vue | About
         </ion-title>
       </ion-toolbar>
     </ion-header>
