@@ -1,6 +1,6 @@
 {
   "name": "vue-test-slider",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -15,31 +15,31 @@
     "slider"
   ],
   "dependencies": {
-    "@ionic/core": "^4.0.2",
-    "@ionic/vue": "0.0.1",
-    "stencil-jeep-slider": "^0.1.5",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "@ionic/core": "^4.1.2",
+    "@ionic/vue": "0.0.4",
+    "stencil-jeep-slider": "^0.1.13",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
+    "@vue/cli-plugin-babel": "^3.5.3",
+    "@vue/cli-plugin-eslint": "^3.5.1",
+    "@vue/cli-service": "^3.5.3",
     "@vue/eslint-config-prettier": "^4.0.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
-    "vue-template-compiler": "^2.5.17"
+    "eslint": "^5.15.3",
+    "eslint-plugin-vue": "^5.2.2",
+    "vue-template-compiler": "^2.6.10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jepiqueau/vue-test-stencil-line-chart.git"
+    "url": "git+https://github.com/jepiqueau/vue-test-stencil-slider.git"
   },
   "author": "Jean Pierre Quéau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jepiqueau/vue-test-stencil-line-chart/issues"
+    "url": "https://github.com/jepiqueau/vue-test-stencil-slider/issues"
   },
-  "homepage": "https://github.com/jepiqueau/vue-test-stencil-line-chart#readme"
+  "homepage": "https://github.com/jepiqueau/vue-test-stencil-slider#readme"
 }

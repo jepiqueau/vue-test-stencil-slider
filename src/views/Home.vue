@@ -10,10 +10,27 @@
 
     <ion-content padding>
       <p>Test Slider Web component in Vue.js</p>
-      <ion-button @click="goToAbout" size="small" expand="block">Go to About</ion-button>
-      <ion-button @click="goToSlider('basichorizontal')" size="small" expand="block">Basic Horizontal</ion-button>
-      <ion-button @click="goToSlider('basicvertical')" size="small" expand="block">Basic Vertical</ion-button>
-      <ion-button @click="goToSlider('paginationnavigationhorizontal')" size="small" expand="block">Pagination Navigation Horizontal</ion-button>
+      <ion-button @click="goToAbout" size="small" expand="block"
+        >Go to About</ion-button
+      >
+      <ion-button
+        @click="goToSlider('basichorizontal')"
+        size="small"
+        expand="block"
+        >Basic Horizontal</ion-button
+      >
+      <ion-button
+        @click="goToSlider('basicvertical')"
+        size="small"
+        expand="block"
+        >Basic Vertical</ion-button
+      >
+      <ion-button
+        @click="goToSlider('paginationnavigationhorizontal')"
+        size="small"
+        expand="block"
+        >Pagination Navigation Horizontal</ion-button
+      >
     </ion-content>
   </ion-app>
 </template>
