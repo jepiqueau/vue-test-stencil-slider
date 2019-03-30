@@ -1,6 +1,6 @@
 {
   "name": "vue-test-slider",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -15,7 +15,6 @@
     "slider"
   ],
   "dependencies": {
-    "@ionic/core": "^4.1.2",
     "@ionic/vue": "0.0.4",
     "stencil-jeep-slider": "^0.1.13",
     "vue": "^2.6.10",
