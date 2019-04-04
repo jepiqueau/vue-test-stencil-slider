@@ -1,11 +1,8 @@
 <template>
-  <router-view></router-view>
+  <ion-app>
+    <ion-vue-router />
+  </ion-app>
 </template>
-<script>
-export default {
-  name: "app"
-};
-</script>
 <style>
 :root {
   --gslider-slide-background: #6d6c6c;

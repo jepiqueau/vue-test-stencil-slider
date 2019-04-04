@@ -1,5 +1,5 @@
 <template>
-  <ion-app>
+  <div class="ion-page">
     <ion-header>
       <ion-toolbar color="light">
         <ion-title>
@@ -32,7 +32,7 @@
         >Pagination Navigation Horizontal</ion-button
       >
     </ion-content>
-  </ion-app>
+  </div>
 </template>
 <script>
 export default {

@@ -3,10 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import { defineCustomElements as slider } from "stencil-jeep-slider/dist/loader";
+
 import Ionic from "@ionic/vue";
+import "@ionic/core/css/ionic.bundle.css";
 
 Vue.config.ignoredElements = [/jeep-\w*/];
-Vue.config.ignoredElements = [/ion-\w*/];
 
 Vue.use(Ionic);
 slider(window);
