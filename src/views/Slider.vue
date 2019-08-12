@@ -1,6 +1,6 @@
 <template>
   <div class="ion-page">
-    <ion-header>
+    <ion-header ref="refheader">
       <ion-toolbar color="light">
         <ion-buttons slot="start">
           <ion-back-button defaultHref="/"></ion-back-button>
@@ -11,12 +11,15 @@
 
     <ion-content fullscreen>
       <template v-if="this.type === 'basichorizontal'">
-        <jeep-slider options='{"direction":"horizontal"}'>
+        <jeep-slider
+          options='{"direction":"horizontal"}'
+          v-on:jeepSliderHeaderVisibility="setHeaderVisibility"
+        >
           <div slot="slider-slides">
             <jeep-slide
               stitle="Section One"
               cstyle=":host{--slide-background: #49b293;
-                --slide-display:block;--slide-header-top:calc(2vmin + 56px);--slide-content-top:calc(4vmin + 56px);--slide-content-padding: 0 2vmin;
+                --slide-display:block;--slide-header-top:15vmin;--slide-content-top:12vmin;--slide-content-padding: 0 2vmin;
                 --slide-content-text-align:left;--slide-content-font-size:4.7vmin;}"
             >
               <h4
@@ -66,7 +69,7 @@
             </jeep-slide>
             <jeep-slide>
               <img
-                src="https://jeepcomponentsviewme.firebaseapp.com/assets/images/image_s1.jpg"
+                src="https://jeepcomponentsviewme.firebaseapp.com/assets/images/deerl.jpg"
                 alt="deer"
                 style="width:75%;max-width:var(--slide-min-width);height:auto;max-height:var(--slide-height);"
               />
@@ -85,12 +88,15 @@
         </jeep-slider>
       </template>
       <template v-if="this.type === 'basicvertical'">
-        <jeep-slider options='{"direction":"vertical"}'>
+        <jeep-slider
+          options='{"direction":"vertical"}'
+          v-on:jeepSliderHeaderVisibility="setHeaderVisibility"
+        >
           <div slot="slider-slides">
             <jeep-slide
               stitle="Section One"
               cstyle=":host{--slide-background: #49b293;
-                --slide-display:block;--slide-header-top:calc(2vmin + 56px);--slide-content-top:calc(4vmin + 56px);--slide-content-padding: 0 2vmin;
+                --slide-display:block;--slide-header-top:15vmin;--slide-content-top:12vmin;--slide-content-padding: 0 2vmin;
                 --slide-content-text-align:left;--slide-content-font-size:4.7vmin;}"
             >
               <h4
@@ -140,7 +146,7 @@
             </jeep-slide>
             <jeep-slide>
               <img
-                src="https://jeepcomponentsviewme.firebaseapp.com/assets/images/image_s1.jpg"
+                src="https://jeepcomponentsviewme.firebaseapp.com/assets/images/deerl.jpg"
                 alt="deer"
                 style="width:75%;max-width:var(--slide-min-width);height:auto;max-height:var(--slide-height);"
               />
@@ -163,12 +169,13 @@
           options='{"direction":"horizontal","duration":3000,
         "navigation":{"hidden":true},
         "pagination":{"bulletsDisplay":7,"clickable":true,"hidden":true}}'
+          v-on:jeepSliderHeaderVisibility="setHeaderVisibility"
         >
           <div slot="slider-slides">
             <jeep-slide
               stitle="Section One"
               cstyle=":host{--slide-background: #49b293;
-            --slide-display:block;--slide-header-top:calc(2vmin + 56px);--slide-content-top:calc(4vmin + 56px);--slide-content-padding: 0 2vmin;
+            --slide-display:block;--slide-header-top:15vmin;--slide-content-top:12vmin;--slide-content-padding: 0 2vmin;
             --slide-content-text-align:left;--slide-content-font-size:4.7vmin;}"
             >
               <h4
@@ -218,7 +225,7 @@
             </jeep-slide>
             <jeep-slide>
               <img
-                src="https://jeepcomponentsviewme.firebaseapp.com/assets/images/image_s1.jpg"
+                src="https://jeepcomponentsviewme.firebaseapp.com/assets/images/deerl.jpg"
                 alt="deer"
                 style="width:75%;max-width:var(--slide-min-width);height:auto;max-height:var(--slide-height);"
               />
@@ -236,7 +243,6 @@
           </div>
         </jeep-slider>
       </template>
-      <template v-if="this.type === 'multipleplots'"> </template>
     </ion-content>
   </div>
 </template>
@@ -248,6 +254,27 @@ export default {
     return {
       type: this.$route.params.type
     };
+  },
+  methods: {
+    setHeaderVisibility: function(ev) {
+      const header = this.$refs.refheader;
+      if (ev.detail && ev.detail.visibility) {
+        if (ev.detail.visibility === "visible") {
+          if (header.classList.contains("hidden"))
+            header.classList.remove("hidden");
+        } else {
+          header.classList.add("hidden");
+        }
+      }
+    }
   }
 };
 </script>
+<style>
+ion-header {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+</style>
